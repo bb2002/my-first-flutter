@@ -23,7 +23,19 @@ class ThreeScreen extends StatelessWidget {
                           onPressed: () {
                             Navigator.pop(context, 'Goodbye');
                           },
-                          child: const Text('POP!!'))
+                          child: const Text('POP!!')),
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamedAndRemoveUntil(
+                                context, '/one', ModalRoute.withName('/two'));
+                          },
+                          child: const Text('pushnamedandremoveuntil')),
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.popUntil(
+                                context, ModalRoute.withName('/two'));
+                          },
+                          child: const Text('popuntil'))
                     ])))));
   }
 }
