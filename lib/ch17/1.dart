@@ -6,9 +6,11 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  String topData = "Hello";
+
   void myIsolate(var args) {
     Future.delayed(Duration(seconds: 3), () {
-      print('myIsolate end. $args');
+      print('myIsolate end. $args, topData: $topData');
     });
   }
 
