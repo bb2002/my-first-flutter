@@ -58,15 +58,17 @@ class NativePluginWidgetState extends State<NativePluginWidget> {
         CREATE TABLE User (
           id INTEGER PRIMARY KEY,
           name TEXT,
-          address TEXT,
-        )
+          address TEXT
+        );
       ''');
     });
 
     var item =
         await db.query('User', columns: ['id'], orderBy: 'id DESC', limit: 1);
-    var user = User.fromMap(item as Map<String, Object?>);
-    lastId = user.id ?? 0;
+    if (item.isNotEmpty) {
+      var user = User.fromMap(item as Map<String, Object?>);
+      lastId = user.id ?? 0;
+    }
   }
 
   void insert() async {
@@ -99,13 +101,14 @@ class NativePluginWidgetState extends State<NativePluginWidget> {
     });
 
     users.forEach((element) {
-      print('User ${element.id} -> ${element.name}');
+      print('User ${element.id} -> ${element.name}, ${element.address}');
     });
   }
 
   @override
   void initState() {
     super.initState();
+    createTable();
   }
 
   @override
