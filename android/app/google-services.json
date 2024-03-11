@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "284751265017",
+    "project_id": "ballbot-first-flutter",
+    "storage_bucket": "ballbot-first-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284751265017:android:b80754a27444656617f628",
+        "android_client_info": {
+          "package_name": "dev.ballbot.flutter_lab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5WJWDJJ0bDX1aEaLYzwjVjTn7jdergSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
